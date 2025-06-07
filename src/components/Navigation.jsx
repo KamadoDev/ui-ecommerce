@@ -105,11 +105,18 @@ const Navigation = () => {
                     <div className="flex items-center gap-4 ml-4">
                         {/* User */}
                         <div className="relative flex items-center" ref={userMenuRef}>
-                            <button onClick={() => setIsUserMenuOpen(!isUserMenuOpen)} className="hover:text-cyan-500 transition-all">
+                            <button
+                                onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
+                                className="hover:text-cyan-500 transition-all"
+                            >
                                 <FaRegUser className="sm:size-4 md:size-4 lg:size-5" />
                             </button>
+
                             <div
-                                className={`absolute right-0 mt-2 w-40 top-full bg-white rounded-md shadow-lg z-50 transition-all duration-300 origin-top transform ${isUserMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+                                className={`absolute left-1/2 top-full mt-2 w-40 -translate-x-1/2 bg-white rounded-md shadow-lg z-50 transition-all duration-300 origin-top transform
+                                    ${isUserMenuOpen
+                                        ? 'opacity-100 scale-100 translate-y-0'
+                                        : 'opacity-0 scale-95 translate-y-2 pointer-events-none'
                                     }`}
                             >
                                 <ul className="text-sm font-semibold text-gray-700">
