@@ -148,49 +148,58 @@ const Navigation = () => {
                         </NavLink>
 
                         {/* Mobile Menu Toggle */}
-                        <button className="text-2xl text-gray-700 lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                        <button
+                            className="text-2xl text-gray-700 lg:hidden"
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        >
                             {isMenuOpen ? <HiOutlineX className="md:size-6" /> : <HiOutlineMenu className="md:size-6" />}
                         </button>
                     </div>
 
                     {/* Mobile Menu */}
-                    {isMenuOpen && (
-                        <nav ref={menuRef} className="lg:hidden absolute z-50 top-full left-0 w-full bg-white shadow-md p-4">
-                            {/* Search Box Mobile */}
-                            <div className="mb-4 relative">
-                                <input
-                                    type="text"
-                                    placeholder="Tìm kiếm..."
-                                    className="w-full border border-gray-300 rounded-full py-2 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                                />
-                                <CiSearch className="absolute right-4 top-2.5 text-gray-500 text-xl" />
-                                {renderSuggestions()}
-                            </div>
+                    {/* Mobile Menu with animation */}
+                    <nav
+                        ref={menuRef}
+                        className={`lg:hidden absolute z-50 top-full left-0 w-full bg-white shadow-md p-4 transition-all duration-300 transform origin-top
+    ${isMenuOpen
+                                ? 'opacity-100 scale-100 translate-y-0'
+                                : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+                            }`}
+                    >
+                        {/* Search Box Mobile */}
+                        <div className="mb-4 relative">
+                            <input
+                                type="text"
+                                placeholder="Tìm kiếm..."
+                                className="w-full border border-gray-300 rounded-full py-2 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                            />
+                            <CiSearch className="absolute right-4 top-2.5 text-gray-500 text-xl" />
+                            {renderSuggestions()}
+                        </div>
 
-                            {/* Menu List */}
-                            <ul className="flex flex-col space-y-3">
-                                {menus.map((menu, index) => (
-                                    <li key={index}>
-                                        <NavLink
-                                            to={menu.path}
-                                            onClick={() => {
-                                                setActiveLink(menu.path);
-                                                setIsMenuOpen(false);
-                                            }}
-                                            className={({ isActive }) =>
-                                                `block w-full px-4 py-2 rounded-md transition duration-200 ${isActive || activeLink === menu.path
-                                                    ? 'text-cyan-700 bg-cyan-100'
-                                                    : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50'
-                                                }`
-                                            }
-                                        >
-                                            {menu.name}
-                                        </NavLink>
-                                    </li>
-                                ))}
-                            </ul>
-                        </nav>
-                    )}
+                        {/* Menu List */}
+                        <ul className="flex flex-col space-y-3">
+                            {menus.map((menu, index) => (
+                                <li key={index}>
+                                    <NavLink
+                                        to={menu.path}
+                                        onClick={() => {
+                                            setActiveLink(menu.path);
+                                            setIsMenuOpen(false);
+                                        }}
+                                        className={({ isActive }) =>
+                                            `block w-full px-4 py-2 rounded-md transition duration-200 ${isActive || activeLink === menu.path
+                                                ? 'text-cyan-700 bg-cyan-100'
+                                                : 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50'
+                                            }`
+                                        }
+                                    >
+                                        {menu.name}
+                                    </NavLink>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </header>
