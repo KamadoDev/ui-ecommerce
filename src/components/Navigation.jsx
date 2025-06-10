@@ -46,7 +46,7 @@ const Navigation = () => {
     );
 
     return (
-        <header className="border-b border-gray-300">
+        <header className="border-b border-gray-300 fixed top-0 left-0 right-0 z-10000 bg-white">
             {/* Top Banner */}
             <div className="bg-black p-4 md:p-3">
                 <div className="flex items-center justify-between gap-y-5">
@@ -161,7 +161,7 @@ const Navigation = () => {
                     <nav
                         ref={menuRef}
                         className={`lg:hidden absolute z-50 top-full left-0 w-full bg-white shadow-md p-4 transition-all duration-300 transform origin-top
-    ${isMenuOpen
+                            ${isMenuOpen
                                 ? 'opacity-100 scale-100 translate-y-0'
                                 : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
                             }`}

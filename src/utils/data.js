@@ -68,3 +68,21 @@ export const slideData = [
         button: 'Shop Now'
     },
 ]
+
+export const timeUnits = [
+    { label: 'Days', value: '03' },
+    { label: 'Hours', value: '23' },
+    { label: 'Minutes', value: '19' },
+    { label: 'Seconds', value: '56' },
+];
+
+export const products = [
+    {
+        images: '/images/iPhone-14-plus-thumb-xanh-600x600.jpg',
+        title: 'iPhone 14 Plus 128GB',
+        description: 'Online',
+        price: '13900000',
+        discount: '14900000',
+        count: '10'
+    }
+]
