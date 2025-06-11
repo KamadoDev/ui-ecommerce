@@ -46,15 +46,15 @@ const Navigation = () => {
     );
 
     return (
-        <header className="border-b border-gray-300 fixed top-0 left-0 right-0 z-10000 bg-white">
+        <header className="border-b border-gray-300 fixed top-0 left-0 right-0 z-1000 bg-white">
             {/* Top Banner */}
-            <div className="bg-black p-4 md:p-3">
+            <div className="bg-orange-600 p-4 md:p-3">
                 <div className="flex items-center justify-between gap-y-5">
                     <div className="text-white mx-auto text-xs md:text-sm text-center">
                         <p>
-                            Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
-                            <span className="ml-2">
-                                <NavLink to="#" className="font-semibold relative text-xs md:text-sm hover:underline text-cyan-500">Shop Now</NavLink>
+                            <span className='text-sm font-semibold'>Chào mừng đến với cửa hàng GuangLi.</span>
+                            <span className="ml-2 px-3 py-2 bg-white rounded-sm">
+                                <NavLink to="#" className="font-semibold text-black relative text-xs md:text-sm  after:absolute after:h-0.5 after:w-full after:translate-y-0.5 after:bg-black after:left-0 after:bottom-0 after:opacity-0 hover:after:translate-y-0 hover:after:opacity-100 transition-all after:duration-300">Mua sắm nhé Bạn ơi...!</NavLink>
                             </span>
                         </p>
                     </div>
@@ -122,7 +122,7 @@ const Navigation = () => {
                                 <ul className="text-sm font-semibold text-gray-700">
                                     <li>
                                         <NavLink to="#" className="block px-4 py-2 hover:bg-gray-200" onClick={() => setIsUserMenuOpen(false)}>
-                                            Profile
+                                            Thông tin của bạn
                                         </NavLink>
                                     </li>
                                     <li>

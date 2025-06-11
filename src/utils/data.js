@@ -1,19 +1,23 @@
 export const menus = [
     {
         path: '/',
-        name: 'Home'
+        name: 'Trang chủ'
     },
     {
-        path: '/contact',
-        name: 'Contact'
+        path: '/giam-gia',
+        name: 'Giảm giá'
     },
     {
-        path: '/about',
-        name: 'About'
+        path: '/ban-chay',
+        name: 'Bán chạy'
     },
     {
-        path: '/signup',
-        name: 'Sign Up'
+        path: '/uu-dai',
+        name: 'Ưu đãi'
+    },
+    {
+        path: '/tin-tuc',
+        name: 'Tin tức'
     },
 ]
 
@@ -70,10 +74,10 @@ export const slideData = [
 ]
 
 export const timeUnits = [
-    { label: 'Days', value: '03' },
-    { label: 'Hours', value: '23' },
-    { label: 'Minutes', value: '19' },
-    { label: 'Seconds', value: '56' },
+    { label: 'Ngày', value: '03' },
+    { label: 'Giờ', value: '23' },
+    { label: 'Phút', value: '19' },
+    { label: 'Giây', value: '56' },
 ];
 
 export const products = [

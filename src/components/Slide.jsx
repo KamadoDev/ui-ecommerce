@@ -10,7 +10,7 @@ import { NavLink } from 'react-router-dom';
 
 const Slide = () => {
   return (
-    <section className='col-span-12 md:col-span-9 w-full'>
+    <div className='col-span-12 md:col-span-8 w-full'>
       <div className='relative'>
         <Swiper
           navigation={
@@ -31,7 +31,7 @@ const Slide = () => {
           {
             slideData.map((slide) => (
               <SwiperSlide key={slide.id}>
-                <div className='relative w-full h-[300px] md:h-[400px] bg-black flex items-center justify-between px-10 text-white'>
+                <div className='relative w-full h-[300px] md:h-[550px] bg-black flex items-center justify-between px-10 text-white'>
                   <div className='z-10 max-w-[50%]'>
                     <h3 className='text-sm md:text-lg text-gray-400 mb-1'>{slide.title}</h3>
                     <h2 className='text-2xl md:text-4xl font-bold leading-tight mb-4'>{slide.description}</h2>
@@ -56,7 +56,7 @@ const Slide = () => {
         {/* Phân trang tùy chỉnh */}
         <div className="swiper-pagination-custom absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex" />
       </div>
-    </section>
+    </div>
   )
 }
 

@@ -37,7 +37,7 @@ const Category = () => {
     }
 
     return (
-        <div className='col-span-12 md:col-span-3 self-start w-full relative'>
+        <div className='col-span-12 md:col-span-2 self-start w-full relative'>
             {/* Toggle button */}
             <button
                 ref={buttonRef}
